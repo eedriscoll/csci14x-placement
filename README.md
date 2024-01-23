@@ -27,7 +27,14 @@ Given an integer `n`, return the n-th prime number.
 **Function signature:**
 ```python
 def nth_prime(n):
-    pass  # Your code goes here
+    prime_list = [2] #to start list of primes
+    num = 3 #start from 3
+    while len(prime_list) < n:
+        if all(num % i != 0 for i in primes): 
+            primes.append(num) 
+        num += 2 
+    print(primes[-1])
+    
 ```
 
 ### Examples:
